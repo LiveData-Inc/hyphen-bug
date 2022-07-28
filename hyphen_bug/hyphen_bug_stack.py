@@ -29,6 +29,4 @@ class HyphenBugStack(Stack):
             auth_type=aws_lambda.FunctionUrlAuthType.NONE
         )
 
-        fn_url.grant_invoke_url(alias)
-
         CfnOutput(self, "FunctionUrl", value=fn_url.url)

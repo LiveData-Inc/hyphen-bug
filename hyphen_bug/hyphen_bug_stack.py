@@ -1,7 +1,7 @@
 from aws_cdk import CfnOutput, Stack, aws_lambda
 from constructs import Construct
 
-ALIAS_NAME = 'HYPHEN-BUG'
+ALIAS_NAME = 'HYPHEN_BUG'
 
 
 inline_code = """
@@ -28,5 +28,7 @@ class HyphenBugStack(Stack):
         fn_url = alias.add_function_url(
             auth_type=aws_lambda.FunctionUrlAuthType.NONE
         )
+
+        fn_url.grant_invoke_url(alias)
 
         CfnOutput(self, "FunctionUrl", value=fn_url.url)

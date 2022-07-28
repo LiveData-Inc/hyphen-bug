@@ -1,7 +1,7 @@
 from aws_cdk import CfnOutput, Stack, aws_lambda
 from constructs import Construct
 
-ALIAS_NAME = 'HYPHEN-BUG'
+ALIAS_NAME = 'HYPHEN-BUG'  # <<< change this to 'HYPHEN_BUG' to make the stack deploy successfully
 
 
 inline_code = """

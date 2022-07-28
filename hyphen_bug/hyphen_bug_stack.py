@@ -1,7 +1,7 @@
 from aws_cdk import CfnOutput, Stack, aws_lambda
 from constructs import Construct
 
-ALIAS_NAME = 'HYPHEN_BUG'
+ALIAS_NAME = 'HYPHEN-BUG'
 
 
 inline_code = """

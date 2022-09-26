@@ -1,0 +1,80 @@
+(.venv) C:\Users\jeff1\Documents\projects\git\cdk\hyphen-bug>cdk deploy
+
+✨  Synthesis time: 17.91s
+
+This deployment will make potentially sensitive changes according to your current security approval level (--require-approval broadening).
+Please confirm you intend to make the following modifications:
+
+IAM Statement Changes
+┌───┬──────────────────────────────┬────────┬──────────────────────────────┬──────────────────────────────┬───────────┐
+│   │ Resource                     │ Effect │ Action                       │ Principal                    │ Condition │
+├───┼──────────────────────────────┼────────┼──────────────────────────────┼──────────────────────────────┼───────────┤
+│ + │ ${HyphenBugLambda/AliasHYPHE │ Allow  │ lambda:InvokeFunctionUrl     │ *                            │           │
+│   │ N-BUG}                       │        │                              │                              │           │
+├───┼──────────────────────────────┼────────┼──────────────────────────────┼──────────────────────────────┼───────────┤
+│ + │ ${HyphenBugLambda/ServiceRol │ Allow  │ sts:AssumeRole               │ Service:lambda.amazonaws.com │           │
+│   │ e.Arn}                       │        │                              │                              │           │
+└───┴──────────────────────────────┴────────┴──────────────────────────────┴──────────────────────────────┴───────────┘
+IAM Policy Changes
+┌───┬────────────────────────────────┬────────────────────────────────────────────────────────────────────────────────┐
+│   │ Resource                       │ Managed Policy ARN                                                             │
+├───┼────────────────────────────────┼────────────────────────────────────────────────────────────────────────────────┤
+│ + │ ${HyphenBugLambda/ServiceRole} │ arn:${AWS::Partition}:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole │
+└───┴────────────────────────────────┴────────────────────────────────────────────────────────────────────────────────┘
+(NOTE: There may be security-related changes not in this list. See https://github.com/aws/aws-cdk/issues/1299)
+
+Do you wish to deploy these changes (y/n)? y
+HyphenBugStack: deploying...
+[0%] start: Publishing a89c162c57c31380680477e112149394a2cbf1523389b908fa9d98cd060f793c:064121861976-us-east-2
+[100%] success: Published a89c162c57c31380680477e112149394a2cbf1523389b908fa9d98cd060f793c:064121861976-us-east-2
+HyphenBugStack: creating CloudFormation changeset...
+HyphenBugStack | 0/8 | 1:44:00 PM | REVIEW_IN_PROGRESS   | AWS::CloudFormation::Stack | HyphenBugStack User Initiated
+HyphenBugStack | 0/8 | 1:44:06 PM | CREATE_IN_PROGRESS   | AWS::CloudFormation::Stack | HyphenBugStack User Initiated
+HyphenBugStack | 0/8 | 1:44:09 PM | CREATE_IN_PROGRESS   | AWS::CDK::Metadata      | CDKMetadata/Default (CDKMetadata)
+HyphenBugStack | 0/8 | 1:44:09 PM | CREATE_IN_PROGRESS   | AWS::IAM::Role          | HyphenBugLambda/ServiceRole (HyphenBugLambdaServiceRole1D7470CB)
+HyphenBugStack | 0/8 | 1:44:10 PM | CREATE_IN_PROGRESS   | AWS::IAM::Role          | HyphenBugLambda/ServiceRole (HyphenBugLambdaServiceRole1D7470CB) Resource creation Initiated
+HyphenBugStack | 0/8 | 1:44:10 PM | CREATE_IN_PROGRESS   | AWS::CDK::Metadata      | CDKMetadata/Default (CDKMetadata) Resource creation Initiated
+HyphenBugStack | 1/8 | 1:44:11 PM | CREATE_COMPLETE      | AWS::CDK::Metadata      | CDKMetadata/Default (CDKMetadata)
+HyphenBugStack | 2/8 | 1:44:25 PM | CREATE_COMPLETE      | AWS::IAM::Role          | HyphenBugLambda/ServiceRole (HyphenBugLambdaServiceRole1D7470CB)
+HyphenBugStack | 2/8 | 1:44:26 PM | CREATE_IN_PROGRESS   | AWS::Lambda::Function   | HyphenBugLambda (HyphenBugLambdaBF88E1E9)
+HyphenBugStack | 2/8 | 1:44:29 PM | CREATE_IN_PROGRESS   | AWS::Lambda::Function   | HyphenBugLambda (HyphenBugLambdaBF88E1E9) Resource creation Initiated
+HyphenBugStack | 3/8 | 1:44:34 PM | CREATE_COMPLETE      | AWS::Lambda::Function   | HyphenBugLambda (HyphenBugLambdaBF88E1E9)
+HyphenBugStack | 3/8 | 1:44:36 PM | CREATE_IN_PROGRESS   | AWS::Lambda::Version    | HyphenBugLambda/CurrentVersion (HyphenBugLambdaCurrentVersion844F5A44ba06439c8aec9343c446f047d4f2665a)
+HyphenBugStack | 3/8 | 1:44:37 PM | CREATE_IN_PROGRESS   | AWS::Lambda::Version    | HyphenBugLambda/CurrentVersion (HyphenBugLambdaCurrentVersion844F5A44ba06439c8aec9343c446f047d4f2665a) Resource creation Initiated
+HyphenBugStack | 4/8 | 1:44:37 PM | CREATE_COMPLETE      | AWS::Lambda::Version    | HyphenBugLambda/CurrentVersion (HyphenBugLambdaCurrentVersion844F5A44ba06439c8aec9343c446f047d4f2665a)
+HyphenBugStack | 4/8 | 1:44:38 PM | CREATE_IN_PROGRESS   | AWS::Lambda::Alias      | HyphenBugLambda/AliasHYPHEN-BUG (HyphenBugLambdaAliasHYPHENBUG02DCD1FF)
+HyphenBugStack | 4/8 | 1:44:38 PM | CREATE_IN_PROGRESS   | AWS::Lambda::Alias      | HyphenBugLambda/AliasHYPHEN-BUG (HyphenBugLambdaAliasHYPHENBUG02DCD1FF) Resource creation Initiated
+HyphenBugStack | 5/8 | 1:44:39 PM | CREATE_COMPLETE      | AWS::Lambda::Alias      | HyphenBugLambda/AliasHYPHEN-BUG (HyphenBugLambdaAliasHYPHENBUG02DCD1FF)
+HyphenBugStack | 5/8 | 1:44:40 PM | CREATE_IN_PROGRESS   | AWS::Lambda::Url        | HyphenBugLambda/AliasHYPHEN-BUG/FunctionUrl (HyphenBugLambdaAliasHYPHENBUGFunctionUrlB90B407E)
+HyphenBugStack | 5/8 | 1:44:40 PM | CREATE_IN_PROGRESS   | AWS::Lambda::Permission | HyphenBugLambda/AliasHYPHEN-BUG/invoke-function-url (HyphenBugLambdaAliasHYPHENBUGinvokefunctionurlCDA5BB7A)
+HyphenBugStack | 5/8 | 1:44:41 PM | CREATE_IN_PROGRESS   | AWS::Lambda::Permission | HyphenBugLambda/AliasHYPHEN-BUG/invoke-function-url (HyphenBugLambdaAliasHYPHENBUGinvokefunctionurlCDA5BB7A) Resource creation Initiated
+HyphenBugStack | 5/8 | 1:44:41 PM | CREATE_IN_PROGRESS   | AWS::Lambda::Url        | HyphenBugLambda/AliasHYPHEN-BUG/FunctionUrl (HyphenBugLambdaAliasHYPHENBUGFunctionUrlB90B407E) Resource creation Initiated
+HyphenBugStack | 6/8 | 1:44:42 PM | CREATE_COMPLETE      | AWS::Lambda::Url        | HyphenBugLambda/AliasHYPHEN-BUG/FunctionUrl (HyphenBugLambdaAliasHYPHENBUGFunctionUrlB90B407E)
+HyphenBugStack | 7/8 | 1:44:51 PM | CREATE_COMPLETE      | AWS::Lambda::Permission | HyphenBugLambda/AliasHYPHEN-BUG/invoke-function-url (HyphenBugLambdaAliasHYPHENBUGinvokefunctionurlCDA5BB7A)
+HyphenBugStack | 7/8 | 1:44:53 PM | ROLLBACK_IN_PROGRESS | AWS::CloudFormation::Stack | HyphenBugStack Unable to retrieve FunctionUrl attribute for AWS::Lambda::Url, with error message Internal error occurred.. Rollback requested by user.
+HyphenBugStack | 7/8 | 1:45:00 PM | DELETE_IN_PROGRESS   | AWS::CDK::Metadata      | CDKMetadata/Default (CDKMetadata)
+HyphenBugStack | 7/8 | 1:45:00 PM | DELETE_IN_PROGRESS   | AWS::Lambda::Url        | HyphenBugLambda/AliasHYPHEN-BUG/FunctionUrl (HyphenBugLambdaAliasHYPHENBUGFunctionUrlB90B407E)
+HyphenBugStack | 7/8 | 1:45:00 PM | DELETE_IN_PROGRESS   | AWS::Lambda::Permission | HyphenBugLambda/AliasHYPHEN-BUG/invoke-function-url (HyphenBugLambdaAliasHYPHENBUGinvokefunctionurlCDA5BB7A)
+HyphenBugStack | 6/8 | 1:45:01 PM | DELETE_COMPLETE      | AWS::CDK::Metadata      | CDKMetadata/Default (CDKMetadata)
+HyphenBugStack | 6/8 | 1:45:01 PM | DELETE_FAILED        | AWS::Lambda::Url        | HyphenBugLambda/AliasHYPHEN-BUG/FunctionUrl (HyphenBugLambdaAliasHYPHENBUGFunctionUrlB90B407E) Resource handler returned message: "Internal error occurred." (RequestToken: 957fb369-cc1b-6e84-53ce-deed3af5b47c, HandlerErrorCode: InternalFailure)
+HyphenBugStack | 5/8 | 1:45:10 PM | DELETE_COMPLETE      | AWS::Lambda::Permission | HyphenBugLambda/AliasHYPHEN-BUG/invoke-function-url (HyphenBugLambdaAliasHYPHENBUGinvokefunctionurlCDA5BB7A)
+HyphenBugStack | 5/8 | 1:45:11 PM | DELETE_IN_PROGRESS   | AWS::Lambda::Alias      | HyphenBugLambda/AliasHYPHEN-BUG (HyphenBugLambdaAliasHYPHENBUG02DCD1FF)
+HyphenBugStack | 4/8 | 1:45:11 PM | DELETE_COMPLETE      | AWS::Lambda::Alias      | HyphenBugLambda/AliasHYPHEN-BUG (HyphenBugLambdaAliasHYPHENBUG02DCD1FF)
+HyphenBugStack | 4/8 | 1:45:12 PM | DELETE_IN_PROGRESS   | AWS::Lambda::Version    | HyphenBugLambda/CurrentVersion (HyphenBugLambdaCurrentVersion844F5A44ba06439c8aec9343c446f047d4f2665a)
+HyphenBugStack | 3/8 | 1:45:13 PM | DELETE_COMPLETE      | AWS::Lambda::Version    | HyphenBugLambda/CurrentVersion (HyphenBugLambdaCurrentVersion844F5A44ba06439c8aec9343c446f047d4f2665a)
+HyphenBugStack | 3/8 | 1:45:13 PM | DELETE_IN_PROGRESS   | AWS::Lambda::Function   | HyphenBugLambda (HyphenBugLambdaBF88E1E9)
+HyphenBugStack | 2/8 | 1:45:22 PM | DELETE_COMPLETE      | AWS::Lambda::Function   | HyphenBugLambda (HyphenBugLambdaBF88E1E9)
+HyphenBugStack | 2/8 | 1:45:22 PM | DELETE_IN_PROGRESS   | AWS::IAM::Role          | HyphenBugLambda/ServiceRole (HyphenBugLambdaServiceRole1D7470CB)
+HyphenBugStack | 1/8 | 1:45:24 PM | DELETE_COMPLETE      | AWS::IAM::Role          | HyphenBugLambda/ServiceRole (HyphenBugLambdaServiceRole1D7470CB)
+HyphenBugStack | 1/8 | 1:45:24 PM | ROLLBACK_FAILED      | AWS::CloudFormation::Stack | HyphenBugStack The following resource(s) failed to delete: [HyphenBugLambdaAliasHYPHENBUGFunctionUrlB90B407E].
+
+Failed resources:
+HyphenBugStack | 1:45:01 PM | DELETE_FAILED        | AWS::Lambda::Url        | HyphenBugLambda/AliasHYPHEN-BUG/FunctionUrl (HyphenBugLambdaAliasHYPHENBUGFunctionUrlB90B407E) Resource handler returned message: "Internal error occurred." (RequestToken: 957fb369-cc1b-6e84-53ce-deed3af5b47c, HandlerErrorCode: InternalFailure)
+
+ ❌  HyphenBugStack failed: Error: The stack named HyphenBugStack failed creation, it may need to be manually deleted from the AWS console: ROLLBACK_FAILED (The following resource(s) failed to delete: [HyphenBugLambdaAliasHYPHENBUGFunctionUrlB90B407E]. ): Resource handler returned message: "Internal error occurred." (RequestToken: 957fb369-cc1b-6e84-53ce-deed3af5b47c, HandlerErrorCode: InternalFailure)
+    at prepareAndExecuteChangeSet (C:\Users\jeff1\AppData\Roaming\npm\node_modules\aws-cdk\lib\api\deploy-stack.ts:386:13)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at CdkToolkit.deploy (C:\Users\jeff1\AppData\Roaming\npm\node_modules\aws-cdk\lib\cdk-toolkit.ts:219:24)
+    at initCommandLine (C:\Users\jeff1\AppData\Roaming\npm\node_modules\aws-cdk\lib\cli.ts:347:12)
+
+The stack named HyphenBugStack failed creation, it may need to be manually deleted from the AWS console: ROLLBACK_FAILED (The following resource(s) failed to delete: [HyphenBugLambdaAliasHYPHENBUGFunctionUrlB90B407E]. ): Resource handler returned message: "Internal error occurred." (RequestToken: 957fb369-cc1b-6e84-53ce-deed3af5b47c, HandlerErrorCode: InternalFailure)

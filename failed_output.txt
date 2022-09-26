@@ -1,0 +1,42 @@
+HyphenBugStack: deploying...
+[0%] start: Publishing a89c162c57c31380680477e112149394a2cbf1523389b908fa9d98cd060f793c:064121861976-us-east-2
+[100%] success: Published a89c162c57c31380680477e112149394a2cbf1523389b908fa9d98cd060f793c:064121861976-us-east-2
+HyphenBugStack: creating CloudFormation changeset...
+HyphenBugStack | 0/8 | 8:24:55 AM | UPDATE_IN_PROGRESS   | AWS::CloudFormation::Stack | HyphenBugStack User Initiated
+HyphenBugStack | 0/8 | 8:24:59 AM | CREATE_IN_PROGRESS   | AWS::Lambda::Alias      | HyphenBugLambda/AliasHYPHEN-BUG (HyphenBugLambdaAliasHYPHENBUG02DCD1FF)
+HyphenBugStack | 0/8 | 8:24:59 AM | CREATE_IN_PROGRESS   | AWS::Lambda::Alias      | HyphenBugLambda/AliasHYPHEN-BUG (HyphenBugLambdaAliasHYPHENBUG02DCD1FF) Resource creation Initiated
+HyphenBugStack | 1/8 | 8:24:59 AM | CREATE_COMPLETE      | AWS::Lambda::Alias      | HyphenBugLambda/AliasHYPHEN-BUG (HyphenBugLambdaAliasHYPHENBUG02DCD1FF)
+HyphenBugStack | 1/8 | 8:25:01 AM | CREATE_IN_PROGRESS   | AWS::Lambda::Permission | HyphenBugLambda/AliasHYPHEN-BUG/invoke-function-url (HyphenBugLambdaAliasHYPHENBUGinvokefunctionurlCDA5BB7A)
+HyphenBugStack | 1/8 | 8:25:01 AM | CREATE_IN_PROGRESS   | AWS::Lambda::Url        | HyphenBugLambda/AliasHYPHEN-BUG/FunctionUrl (HyphenBugLambdaAliasHYPHENBUGFunctionUrlB90B407E)
+HyphenBugStack | 1/8 | 8:25:01 AM | CREATE_IN_PROGRESS   | AWS::Lambda::Permission | HyphenBugLambda/AliasHYPHEN-BUG/invoke-function-url (HyphenBugLambdaAliasHYPHENBUGinvokefunctionurlCDA5BB7A) Resource creation Initiated
+HyphenBugStack | 1/8 | 8:25:03 AM | CREATE_IN_PROGRESS   | AWS::Lambda::Url        | HyphenBugLambda/AliasHYPHEN-BUG/FunctionUrl (HyphenBugLambdaAliasHYPHENBUGFunctionUrlB90B407E) Resource creation Initiated
+HyphenBugStack | 2/8 | 8:25:04 AM | CREATE_COMPLETE      | AWS::Lambda::Url        | HyphenBugLambda/AliasHYPHEN-BUG/FunctionUrl (HyphenBugLambdaAliasHYPHENBUGFunctionUrlB90B407E)
+HyphenBugStack | 3/8 | 8:25:12 AM | CREATE_COMPLETE      | AWS::Lambda::Permission | HyphenBugLambda/AliasHYPHEN-BUG/invoke-function-url (HyphenBugLambdaAliasHYPHENBUGinvokefunctionurlCDA5BB7A)
+HyphenBugStack | 3/8 | 8:25:13 AM | UPDATE_ROLLBACK_IN_P | AWS::CloudFormation::Stack | HyphenBugStack Unable to retrieve FunctionUrl attribute for AWS::Lambda::Url, with error message Internal error occurred.
+HyphenBugStack | 4/8 | 8:25:17 AM | UPDATE_ROLLBACK_COMP | AWS::CloudFormation::Stack | HyphenBugStack
+HyphenBugStack | 4/8 | 8:25:18 AM | DELETE_IN_PROGRESS   | AWS::Lambda::Permission | HyphenBugLambda/AliasHYPHEN-BUG/invoke-function-url (HyphenBugLambdaAliasHYPHENBUGinvokefunctionurlCDA5BB7A)
+HyphenBugStack | 4/8 | 8:25:18 AM | DELETE_IN_PROGRESS   | AWS::Lambda::Url        | HyphenBugLambda/AliasHYPHEN-BUG/FunctionUrl (HyphenBugLambdaAliasHYPHENBUGFunctionUrlB90B407E)
+HyphenBugStack | 4/8 | 8:25:19 AM | DELETE_FAILED        | AWS::Lambda::Url        | HyphenBugLambda/AliasHYPHEN-BUG/FunctionUrl (HyphenBugLambdaAliasHYPHENBUGFunctionUrlB90B407E) Resource handler returned message: "Internal error occurred." (RequestToken: 257c63a4-a223-83e1-3c92-9a560b7e8992, HandlerErrorCode: InternalFailure)
+HyphenBugStack | 3/8 | 8:25:29 AM | DELETE_COMPLETE      | AWS::Lambda::Permission | HyphenBugLambda/AliasHYPHEN-BUG/invoke-function-url (HyphenBugLambdaAliasHYPHENBUGinvokefunctionurlCDA5BB7A)
+HyphenBugStack | 3/8 | 8:25:30 AM | DELETE_IN_PROGRESS   | AWS::Lambda::Alias      | HyphenBugLambda/AliasHYPHEN-BUG (HyphenBugLambdaAliasHYPHENBUG02DCD1FF)
+HyphenBugStack | 2/8 | 8:25:30 AM | DELETE_COMPLETE      | AWS::Lambda::Alias      | HyphenBugLambda/AliasHYPHEN-BUG (HyphenBugLambdaAliasHYPHENBUG02DCD1FF)
+2/8 Currently in progress: HyphenBugStack
+HyphenBugStack | 2/8 | 8:28:31 AM | DELETE_IN_PROGRESS   | AWS::Lambda::Url        | HyphenBugLambda/AliasHYPHEN-BUG/FunctionUrl (HyphenBugLambdaAliasHYPHENBUGFunctionUrlB90B407E)
+HyphenBugStack | 2/8 | 8:28:32 AM | DELETE_FAILED        | AWS::Lambda::Url        | HyphenBugLambda/AliasHYPHEN-BUG/FunctionUrl (HyphenBugLambdaAliasHYPHENBUGFunctionUrlB90B407E) Resource handler returned message: "Internal error occurred." (RequestToken: 1b0df270-23a6-c393-ff64-e4584c884880, HandlerErrorCode: InternalFailure)
+2/8 Currently in progress: HyphenBugStack
+HyphenBugStack | 2/8 | 8:31:33 AM | DELETE_IN_PROGRESS   | AWS::Lambda::Url        | HyphenBugLambda/AliasHYPHEN-BUG/FunctionUrl (HyphenBugLambdaAliasHYPHENBUGFunctionUrlB90B407E)
+HyphenBugStack | 2/8 | 8:31:35 AM | DELETE_FAILED        | AWS::Lambda::Url        | HyphenBugLambda/AliasHYPHEN-BUG/FunctionUrl (HyphenBugLambdaAliasHYPHENBUGFunctionUrlB90B407E) Resource handler returned message: "Internal error occurred." (RequestToken: 5570c7cf-2033-09df-f4c3-08fb77856aa7, HandlerErrorCode: InternalFailure)
+HyphenBugStack | 3/8 | 8:31:36 AM | UPDATE_ROLLBACK_COMP | AWS::CloudFormation::Stack | HyphenBugStack Update successful. One or more resources could not be deleted.
+
+Failed resources:
+HyphenBugStack | 8:25:19 AM | DELETE_FAILED        | AWS::Lambda::Url        | HyphenBugLambda/AliasHYPHEN-BUG/FunctionUrl (HyphenBugLambdaAliasHYPHENBUGFunctionUrlB90B407E) Resource handler returned message: "Internal error occurred." (RequestToken: 257c63a4-a223-83e1-3c92-9a560b7e8992, HandlerErrorCode: InternalFailure)
+HyphenBugStack | 8:28:32 AM | DELETE_FAILED        | AWS::Lambda::Url        | HyphenBugLambda/AliasHYPHEN-BUG/FunctionUrl (HyphenBugLambdaAliasHYPHENBUGFunctionUrlB90B407E) Resource handler returned message: "Internal error occurred." (RequestToken: 1b0df270-23a6-c393-ff64-e4584c884880, HandlerErrorCode: InternalFailure)
+HyphenBugStack | 8:31:35 AM | DELETE_FAILED        | AWS::Lambda::Url        | HyphenBugLambda/AliasHYPHEN-BUG/FunctionUrl (HyphenBugLambdaAliasHYPHENBUGFunctionUrlB90B407E) Resource handler returned message: "Internal error occurred." (RequestToken: 5570c7cf-2033-09df-f4c3-08fb77856aa7, HandlerErrorCode: InternalFailure)
+
+ ❌  HyphenBugStack failed: Error: The stack named HyphenBugStack failed to deploy: UPDATE_ROLLBACK_COMPLETE (Update successful. One or more resources could not be deleted.): Resource handler returned message: "Internal error occurred." (RequestToken: 257c63a4-a223-83e1-3c92-9a560b7e8992, HandlerErrorCode: InternalFailure), Resource handler returned message: "Internal error occurred." (RequestToken: 1b0df270-23a6-c393-ff64-e4584c884880, HandlerErrorCode: InternalFailure), Resource handler returned message: "Internal error occurred." (RequestToken: 5570c7cf-2033-09df-f4c3-08fb77856aa7, HandlerErrorCode: InternalFailure)
+    at prepareAndExecuteChangeSet (C:\Users\jeff1\AppData\Roaming\npm\node_modules\aws-cdk\lib\api\deploy-stack.ts:386:13)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at CdkToolkit.deploy (C:\Users\jeff1\AppData\Roaming\npm\node_modules\aws-cdk\lib\cdk-toolkit.ts:219:24)
+    at initCommandLine (C:\Users\jeff1\AppData\Roaming\npm\node_modules\aws-cdk\lib\cli.ts:347:12)
+
+The stack named HyphenBugStack failed to deploy: UPDATE_ROLLBACK_COMPLETE (Update successful. One or more resources could not be deleted.): Resource handler returned message: "Internal error occurred." (RequestToken: 257c63a4-a223-83e1-3c92-9a560b7e8992, HandlerErrorCode: InternalFailure), Resource handler returned message: "Internal error occurred." (RequestToken: 1b0df270-23a6-c393-ff64-e4584c884880, HandlerErrorCode: InternalFailure), Resource handler returned message: "Internal error occurred." (RequestToken: 5570c7cf-2033-09df-f4c3-08fb77856aa7, HandlerErrorCode: InternalFailure)
